@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Pintura de Arte Sacra Completo</title>
+    <!-- Tailwind CSS para estilização moderna e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cinzel para títulos nobres/litúrgicos e Inter para textos de leitura fluida -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones profissionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sacraNavy: '#0a1b33',  /* Azul Marinho extraído exatamente dos infográficos */
+                        sacraGold: '#c29a38',  /* Dourado Nobre Litúrgico */
+                        sacraCream: '#f5f2eb', /* Creme/Marfim exato de fundo das imagens */
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animação suave de pulsação para o botão de checkout aumentar o CTR */
+        @keyframes pulse-gold {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(194, 154, 56, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 4px 25px rgba(194, 154, 56, 0.7); }
+        }
+        .btn-pulse {
+            animation: pulse-gold 2s infinite ease-in-out;
+        }
+
+        /* Efeito de granulação para simular a textura de papel/gesso das imagens de IA */
+        .textured-bg {
+            background-color: #f5f2eb;
+            background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0), radial-gradient(rgba(0,0,0,0.02) 1px, transparent 0);
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+        }
+
+        /* Evita qualquer espaço em branco ou desalinhamento entre as fatias de imagem */
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-stone-300 font-inter antialiased min-h-screen flex flex-col items-center">
+
+    <main class="w-full max-w-[640px] textured-bg min-h-screen shadow-2xl flex flex-col relative overflow-hidden">
+        
+        <!-- Bloco 1: Imagem Fatiada do Topo (Hero + Conceito) -->
+        <section id="section-image-1" class="w-full">
+            <img id="img-slice-1" src="Infográfico_curso_artesanato_Nos…_2K_202607040755.jpeg" alt="Curso de Arte Sacra - Introdução" class="w-full" onerror="handleImageError(this, 1)">
+        </section>
+
+        <!-- Bloco de Checkout 1: Integrado e sem emendas de borda -->
+        <section class="w-full bg-[#f5f2eb] py-4">
+            <div class="bg-sacraNavy w-full p-4 md:p-6 border-y border-sacraGold/30 shadow-inner flex flex-col gap-4">
+                
+                <!-- Grade Principal do Checkout -->
+                <div class="grid grid-cols-12 gap-3 items-center">
+                    
+                    <!-- Preço da Esquerda -->
+                    <div class="col-span-12 md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-sacraGold/20 pb-3 md:pb-0 md:pr-4">
+                        <span class="text-stone-400 text-[10px] tracking-wider uppercase block">Por Apenas</span>
+                        <div class="flex items-baseline justify-center md:justify-start gap-1">
+                            <span class="text-sacraGold font-bold text-base">R$</span>
+                            <span class="text-white font-black text-4xl md:text-5xl font-cinzel tracking-tight">37,00</span>
+                        </div>
+                        <span class="text-sacraGold font-semibold text-xs mt-1 block">ou 12x de R$ 3,69</span>
+                        <span class="text-stone-400 text-[9px] block mt-0.5">ou R$ 37 à vista no PIX</span>
+                    </div>
+
+                    <!-- Botão de Compra Centralizado -->
+                    <div class="col-span-12 md:col-span-5 flex flex-col items-center justify-center gap-2">
+                        <a href="https://payfast.greenn.com.br/c/vda1xlv8" target="_blank" class="checkout-link w-full bg-gradient-to-r from-sacraGold to-yellow-500 hover:from-yellow-500 hover:to-sacraGold text-sacraNavy font-black text-center text-xs md:text-sm py-3 px-4 rounded shadow-md transition-all duration-300 btn-pulse flex items-center justify-center gap-2 tracking-wide font-cinzel active:scale-95">
+                            QUERO APRENDER ARTE SACRA
+                            <i class="fa-solid fa-circle-chevron-right text-xs"></i>
+                        </a>
+                        <span class="text-[9px] text-stone-300 flex items-center gap-1.5 font-medium">
+                            <i class="fa-solid fa-lock text-emerald-400"></i> COMPRA 100% SEGURA
+                        </span>
+                    </div>
+
+                    <!-- Selo de Desconto da Direita -->
+                    <div class="col-span-12 md:col-span-3 flex items-center justify-center">
+                        <div class="border border-sacraGold/40 rounded py-2 px-3 text-center bg-sacraNavy/40 w-full max-w-[120px] md:max-w-none">
+                            <span class="text-[8px] text-stone-400 block uppercase tracking-wider">Desconto de</span>
+                            <span class="text-sacraGold font-black text-lg font-cinzel tracking-tight">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bloco 2: Imagem Fatiada do Meio (Conteúdo e Depoimentos) -->
+        <section id="section-image-2" class="w-full">
+            <img id="img-slice-2" src="Infográfico_curso_artesanato_blo…_2K_202607040755.jpeg" alt="Conteúdo do Curso e Depoimentos" class="w-full" onerror="handleImageError(this, 2)">
+        </section>
+
+        <!-- Bloco de Checkout 2: Repetição estratégica para conversão no meio do scroll -->
+        <section class="w-full bg-[#f5f2eb] py-4">
+            <div class="bg-sacraNavy w-full p-4 md:p-6 border-y border-sacraGold/30 shadow-inner flex flex-col gap-4">
+                
+                <div class="grid grid-cols-12 gap-3 items-center">
+                    
+                    <div class="col-span-12 md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-sacraGold/20 pb-3 md:pb-0 md:pr-4">
+                        <span class="text-stone-400 text-[10px] tracking-wider uppercase block">Por Apenas</span>
+                        <div class="flex items-baseline justify-center md:justify-start gap-1">
+                            <span class="text-sacraGold font-bold text-base">R$</span>
+                            <span class="text-white font-black text-4xl md:text-5xl font-cinzel tracking-tight">37,00</span>
+                        </div>
+                        <span class="text-sacraGold font-semibold text-xs mt-1 block">ou 12x de R$ 3,69</span>
+                        <span class="text-stone-400 text-[9px] block mt-0.5">ou R$ 37 à vista no PIX</span>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-5 flex flex-col items-center justify-center gap-2">
+                        <a href="https://payfast.greenn.com.br/c/vda1xlv8" target="_blank" class="checkout-link w-full bg-gradient-to-r from-sacraGold to-yellow-500 hover:from-yellow-500 hover:to-sacraGold text-sacraNavy font-black text-center text-xs md:text-sm py-3 px-4 rounded shadow-md transition-all duration-300 btn-pulse flex items-center justify-center gap-2 tracking-wide font-cinzel active:scale-95">
+                            QUERO APRENDER ARTE SACRA
+                            <i class="fa-solid fa-circle-chevron-right text-xs"></i>
+                        </a>
+                        <span class="text-[9px] text-stone-300 flex items-center gap-1.5 font-medium">
+                            <i class="fa-solid fa-lock text-emerald-400"></i> COMPRA 100% SEGURA
+                        </span>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-3 flex items-center justify-center">
+                        <div class="border border-sacraGold/40 rounded py-2 px-3 text-center bg-sacraNavy/40 w-full max-w-[120px] md:max-w-none">
+                            <span class="text-[8px] text-stone-400 block uppercase tracking-wider">Desconto de</span>
+                            <span class="text-sacraGold font-black text-lg font-cinzel tracking-tight">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bloco 3: Imagem Fatiada de Baixo (Terapia/Idosos) -->
+        <section id="section-image-3" class="w-full">
+            <img id="img-slice-3" src="Arte_como_terapia_para_idosos_202607040755.jpeg" alt="Terapia com Arte Sacra" class="w-full" onerror="handleImageError(this, 3)">
+        </section>
+
+        <!-- Bloco de Checkout 3: Rodapé com oferta de encerramento -->
+        <section class="w-full bg-[#f5f2eb] py-4">
+            <div class="bg-sacraNavy w-full p-5 md:p-6 border-y border-sacraGold/40 shadow-2xl flex flex-col gap-5 relative">
+                
+                <!-- Faixa decorativa superior -->
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sacraGold text-sacraNavy text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded shadow-md font-cinzel">
+                    OFERTA POR TEMPO LIMITADO
+                </div>
+
+                <div class="grid grid-cols-12 gap-4 items-center mt-2">
+                    
+                    <div class="col-span-12 md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-sacraGold/20 pb-4 md:pb-0 md:pr-4">
+                        <span class="text-stone-400 text-xs tracking-wider uppercase block">Por Apenas</span>
+                        <div class="flex items-baseline justify-center md:justify-start gap-1">
+                            <span class="text-sacraGold font-bold text-base">R$</span>
+                            <span class="text-white font-black text-4xl md:text-5xl font-cinzel tracking-tight">37,00</span>
+                        </div>
+                        <span class="text-sacraGold font-semibold text-xs mt-1 block">ou 12x de R$ 3,69</span>
+                        <span class="text-stone-400 text-[9px] block mt-1">ou R$ 37 à vista no PIX</span>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-5 flex flex-col items-center justify-center gap-2">
+                        <a href="https://payfast.greenn.com.br/c/vda1xlv8" target="_blank" class="checkout-link w-full bg-gradient-to-r from-sacraGold to-yellow-500 hover:from-yellow-500 hover:to-sacraGold text-sacraNavy font-black text-center text-sm py-3.5 px-4 rounded shadow-md transition-all duration-300 btn-pulse flex items-center justify-center gap-2 tracking-wide font-cinzel active:scale-95">
+                            QUERO APRENDER ARTE SACRA
+                            <i class="fa-solid fa-circle-chevron-right text-base"></i>
+                        </a>
+                        <span class="text-[10px] text-stone-300 flex items-center gap-1.5 font-medium">
+                            <i class="fa-solid fa-shield-halved text-emerald-400"></i> SATISFAÇÃO GARANTIDA POR 7 DIAS
+                        </span>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-3 flex items-center justify-center">
+                        <div class="border border-sacraGold/40 rounded py-3 px-3 text-center bg-sacraNavy/40 w-full max-w-[130px] md:max-w-none">
+                            <span class="text-[9px] text-stone-400 block uppercase tracking-wider">Desconto de</span>
+                            <span class="text-sacraGold font-black text-xl font-cinzel tracking-tight">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="bg-sacraNavy text-stone-300 text-xs py-8 px-6 text-center border-t border-sacraGold/20 flex flex-col items-center gap-4">
+            <div class="flex flex-wrap justify-center gap-4 text-stone-400 font-medium">
+                <button onclick="toggleModal('privacy-modal')" class="hover:text-sacraGold transition">Política de Privacidade</button>
+                <span>•</span>
+                <button onclick="toggleModal('terms-modal')" class="hover:text-sacraGold transition">Termos de Uso</button>
+            </div>
+            
+            <p class="text-[10px] text-stone-500 max-w-md leading-relaxed mt-2">
+                "Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site."
+            </p>
+
+            <div class="flex items-center gap-6 mt-4 opacity-50">
+                <i class="fa-brands fa-cc-visa text-2xl"></i>
+                <i class="fa-brands fa-cc-mastercard text-2xl"></i>
+                <i class="fa-brands fa-pix text-2xl"></i>
+                <i class="fa-solid fa-shield-cat text-2xl"></i>
+            </div>
+
+            <p class="text-[10px] text-stone-500 mt-4">
+                © 2026 Curso de Pintura de Arte Sacra. Todos os direitos reservados.
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Botão de Administração Oculto -->
+    <div id="admin-panel-btn" class="fixed bottom-4 right-4 z-50">
+        <button onclick="toggleModal('admin-modal')" class="bg-sacraNavy hover:bg-sacraGold text-white hover:text-sacraNavy w-12 h-12 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 border border-sacraGold/30">
+            <i class="fa-solid fa-gears text-lg"></i>
+        </button>
+    </div>
+
+    <!-- Modal de Configuração -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/75 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-sacraNavy border-2 border-sacraGold rounded-2xl p-6 w-full max-w-lg shadow-2xl flex flex-col gap-4 text-white">
+            <div class="flex justify-between items-center border-b border-sacraGold/30 pb-3">
+                <h3 class="font-cinzel text-lg text-sacraGold font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> CONFIGURAÇÕES DO FUNIL
+                </h3>
+                <button onclick="toggleModal('admin-modal')" class="text-stone-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            
+            <p class="text-xs text-stone-300">
+                Altere os links e caminhos das imagens em tempo real. As alterações são salvas diretamente no seu navegador.
+            </p>
+
+            <div class="flex flex-col gap-3 text-sm">
+                <div>
+                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Link de Checkout (Greenn)</label>
+                    <input type="text" id="cfg-checkout-link" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold" placeholder="https://payfast.greenn.com.br/...">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Imagem 1 (Cabeçalho)</label>
+                    <input type="text" id="cfg-img-1" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Imagem 2 (Conteúdo)</label>
+                    <input type="text" id="cfg-img-2" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Imagem 3 (Terapia/Idosos)</label>
+                    <input type="text" id="cfg-img-3" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold">
+                </div>
+            </div>
+
+            <div class="flex gap-3 justify-end mt-2">
+                <button onclick="toggleModal('admin-modal')" class="px-4 py-2 rounded text-stone-400 hover:text-white text-xs">Cancelar</button>
+                <button onclick="saveAdminSettings()" class="bg-sacraGold text-sacraNavy font-bold px-5 py-2 rounded text-xs hover:bg-yellow-500 transition">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Privacidade -->
+    <div id="privacy-modal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl p-6 w-full max-w-lg max-h-[80vh] overflow-y-auto flex flex-col gap-4 text-stone-700">
+            <h3 class="font-cinzel text-xl text-sacraNavy font-bold">Política de Privacidade</h3>
+            <div class="text-xs leading-relaxed flex flex-col gap-2">
+                <p>Nós respeitamos a sua privacidade. Todas as informações coletadas durante a sua inscrição ou navegação são protegidas de forma confidencial e de acordo com a LGPD (Lei Geral de Proteção de Dados).</p>
+                <p>Seus dados de pagamento são totalmente processados de forma criptografada pela plataforma parceira Greenn, garantindo que não temos acesso direto aos seus dados de cartão de crédito.</p>
+            </div>
+            <button onclick="toggleModal('privacy-modal')" class="bg-sacraNavy text-white py-2 rounded mt-2 text-xs hover:bg-sacraGold hover:text-sacraNavy transition font-bold">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal Termos -->
+    <div id="terms-modal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl p-6 w-full max-w-lg max-h-[80vh] overflow-y-auto flex flex-col gap-4 text-stone-700">
+            <h3 class="font-cinzel text-xl text-sacraNavy font-bold">Termos de Uso</h3>
+            <div class="text-xs leading-relaxed flex flex-col gap-2">
+                <p>Ao adquirir o Curso de Pintura de Arte Sacra Completo, você recebe acesso individual e intransferível à área de alunos por um período mínimo de 1 ano.</p>
+                <p>É expressamente proibida a reprodução, cópia, venda ilegal ou rateio do conteúdo educacional fornecido em formato de vídeo ou suporte.</p>
+            </div>
+            <button onclick="toggleModal('terms-modal')" class="bg-sacraNavy text-white py-2 rounded mt-2 text-xs hover:bg-sacraGold hover:text-sacraNavy transition font-bold">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // Configurações padrão com as novas imagens geradas e enviadas pelo usuário
+        const DEFAULT_SETTINGS = {
+            checkoutLink: "https://payfast.greenn.com.br/c/vda1xlv8",
+            img1: "Infográfico_curso_artesanato_Nos…_2K_202607040755.jpeg",
+            img2: "Infográfico_curso_artesanato_blo…_2K_202607040755.jpeg",
+            img3: "Arte_como_terapia_para_idosos_202607040755.jpeg"
+        };
+
+        // Carrega configurações persistidas no navegador ou as padrões
+        function loadSettings() {
+            const saved = localStorage.getItem("sacra_landing_settings");
+            const settings = saved ? JSON.parse(saved) : DEFAULT_SETTINGS;
+
+            // Aplica as imagens nos elementos HTML correspondentes
+            document.getElementById("img-slice-1").src = settings.img1;
+            document.getElementById("img-slice-2").src = settings.img2;
+            document.getElementById("img-slice-3").src = settings.img3;
+
+            // Atualiza todos os botões de checkout da página
+            const links = document.querySelectorAll(".checkout-link");
+            links.forEach(link => {
+                link.href = settings.checkoutLink;
+            });
+
+            // Preenche os campos do painel administrativo
+            document.getElementById("cfg-checkout-link").value = settings.checkoutLink;
+            document.getElementById("cfg-img-1").value = settings.img1;
+            document.getElementById("cfg-img-2").value = settings.img2;
+            document.getElementById("cfg-img-3").value = settings.img3;
+        }
+
+        // Salva as novas configurações
+        function saveAdminSettings() {
+            const newSettings = {
+                checkoutLink: document.getElementById("cfg-checkout-link").value,
+                img1: document.getElementById("cfg-img-1").value,
+                img2: document.getElementById("cfg-img-2").value,
+                img3: document.getElementById("cfg-img-3").value
+            };
+
+            localStorage.setItem("sacra_landing_settings", JSON.stringify(newSettings));
+            loadSettings();
+            toggleModal('admin-modal');
+        }
+
+        // Gerenciador de erros de carregamento de imagem moderno e limpo
+        function handleImageError(img, sliceNum) {
+            console.warn(`Imagem fatiada ${sliceNum} não encontrada. Usando gerador visual de placeholder.`);
+            img.onerror = null; // evita loop infinito
+            
+            // Criando uma imagem de fallback elegante, branca e limpa
+            img.src = `https://placehold.co/640x960/ffffff/0a1b33?text=INSIRA+A+IMAGEM+${sliceNum}+AQUI`;
+            img.className = "w-full h-auto object-cover py-20 px-4 text-center font-cinzel bg-white";
+        }
+
+        // Alterna a visibilidade dos modais de forma limpa e sem conflitos
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.toggle("hidden");
+            }
+        }
+
+        // Inicia a renderização de elementos no carregamento da janela
+        window.onload = function () {
+            loadSettings();
+        };
+    </script>
+</body>
+</html>
