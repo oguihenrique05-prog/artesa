@@ -63,12 +63,12 @@
         
         <!-- Bloco 1: Imagem do Topo (Hero + Conceito) -->
         <section id="section-image-1" class="w-full bg-white">
-            <img id="img-slice-1" src="topo.jpeg" alt="Curso de Arte Sacra - Introdução" class="w-full" onerror="handleImageError(this, 1)">
+            <img id="img-slice-1" src="topo.jpeg" alt="Curso de Arte Sacra - Introdução" class="w-full" onerror="handleImageError(this)">
         </section>
 
         <!-- Bloco de Checkout 1: Integrado e sem emendas de borda -->
-        <section class="w-full bg-sacraNavy py-4 border-y border-sacraGold/30 shadow-inner">
-            <div class="px-4 md:px-6 flex flex-col gap-4">
+        <section class="w-full bg-sacraNavy py-5 border-y border-sacraGold/30 shadow-inner">
+            <div class="px-4 flex flex-col gap-4">
                 
                 <!-- Grade Principal do Checkout -->
                 <div class="grid grid-cols-12 gap-3 items-center">
@@ -109,12 +109,12 @@
 
         <!-- Bloco 2: Imagem do Meio (Conteúdo e Depoimentos) -->
         <section id="section-image-2" class="w-full bg-white">
-            <img id="img-slice-2" src="conteudo.jpeg" alt="Conteúdo do Curso e Depoimentos" class="w-full" onerror="handleImageError(this, 2)">
+            <img id="img-slice-2" src="conteudo.jpeg" alt="Conteúdo do Curso e Depoimentos" class="w-full" onerror="handleImageError(this)">
         </section>
 
         <!-- Bloco de Checkout 2: Repetição estratégica para conversão no meio do scroll -->
-        <section class="w-full bg-sacraNavy py-4 border-y border-sacraGold/30 shadow-inner">
-            <div class="px-4 md:px-6 flex flex-col gap-4">
+        <section class="w-full bg-sacraNavy py-5 border-y border-sacraGold/30 shadow-inner">
+            <div class="px-4 flex flex-col gap-4">
                 
                 <div class="grid grid-cols-12 gap-3 items-center">
                     
@@ -151,18 +151,18 @@
 
         <!-- Bloco 3: Imagem de Baixo (Terapia/Idosos) -->
         <section id="section-image-3" class="w-full bg-white">
-            <img id="img-slice-3" src="terapia.jpeg" alt="Terapia com Arte Sacra" class="w-full" onerror="handleImageError(this, 3)">
+            <img id="img-slice-3" src="terapia.jpeg" alt="Terapia com Arte Sacra" class="w-full" onerror="handleImageError(this)">
         </section>
 
         <!-- Bloco de Checkout 3: Rodapé com oferta de encerramento -->
-        <section class="w-full bg-sacraNavy py-5 border-y border-sacraGold/40 shadow-2xl relative">
+        <section class="w-full bg-sacraNavy py-6 border-y border-sacraGold/40 shadow-2xl relative">
             
             <!-- Faixa decorativa superior -->
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sacraGold text-sacraNavy text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded shadow-md font-cinzel">
                 OFERTA POR TEMPO LIMITADO
             </div>
 
-            <div class="px-4 md:px-6 flex flex-col gap-4 mt-2">
+            <div class="px-4 flex flex-col gap-4 mt-2">
                 <div class="grid grid-cols-12 gap-4 items-center">
                     
                     <div class="col-span-12 md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-sacraGold/20 pb-4 md:pb-0 md:pr-4">
@@ -220,53 +220,6 @@
 
     </main>
 
-    <!-- Botão de Administração Oculto -->
-    <div id="admin-panel-btn" class="fixed bottom-4 right-4 z-50">
-        <button onclick="toggleModal('admin-modal')" class="bg-sacraNavy hover:bg-sacraGold text-white hover:text-sacraNavy w-12 h-12 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 border border-sacraGold/30">
-            <i class="fa-solid fa-gears text-lg"></i>
-        </button>
-    </div>
-
-    <!-- Modal de Configuração -->
-    <div id="admin-modal" class="fixed inset-0 bg-black/75 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-sacraNavy border-2 border-sacraGold rounded-2xl p-6 w-full max-w-lg shadow-2xl flex flex-col gap-4 text-white">
-            <div class="flex justify-between items-center border-b border-sacraGold/30 pb-3">
-                <h3 class="font-cinzel text-lg text-sacraGold font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-screwdriver-wrench"></i> CONFIGURAÇÕES DO FUNIL
-                </h3>
-                <button onclick="toggleModal('admin-modal')" class="text-stone-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
-            </div>
-            
-            <p class="text-xs text-stone-300">
-                Altere os links e caminhos das imagens em tempo real de forma simples. As alterações são salvas diretamente no seu navegador.
-            </p>
-
-            <div class="flex flex-col gap-3 text-sm">
-                <div>
-                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Link de Checkout (Greenn)</label>
-                    <input type="text" id="cfg-checkout-link" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold" placeholder="https://payfast.greenn.com.br/...">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Imagem 1 (Cabeçalho)</label>
-                    <input type="text" id="cfg-img-1" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Imagem 2 (Conteúdo)</label>
-                    <input type="text" id="cfg-img-2" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-sacraGold mb-1 uppercase tracking-wider">Imagem 3 (Terapia/Idosos)</label>
-                    <input type="text" id="cfg-img-3" class="w-full bg-sacraNavy/50 border border-sacraGold/40 rounded px-3 py-2 text-white focus:outline-none focus:border-sacraGold">
-                </div>
-            </div>
-
-            <div class="flex gap-3 justify-end mt-2">
-                <button onclick="toggleModal('admin-modal')" class="px-4 py-2 rounded text-stone-400 hover:text-white text-xs">Cancelar</button>
-                <button onclick="saveAdminSettings()" class="bg-sacraGold text-sacraNavy font-bold px-5 py-2 rounded text-xs hover:bg-yellow-500 transition">Salvar Alterações</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Modal Privacidade -->
     <div id="privacy-modal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-xl p-6 w-full max-w-lg max-h-[80vh] overflow-y-auto flex flex-col gap-4 text-stone-700">
@@ -292,76 +245,13 @@
     </div>
 
     <script>
-        // Configurações padrão apontando estritamente para a raiz do repositório no Git
-        // Usamos uma nova chave de armazenamento (v3) para forçar o reset do seu cache local
-        const LOCAL_STORAGE_KEY = "sacra_landing_settings_v3";
-
-        const DEFAULT_SETTINGS = {
-            checkoutLink: "https://payfast.greenn.com.br/c/vda1xlv8",
-            img1: "topo.jpeg",
-            img2: "conteudo.jpeg",
-            img3: "terapia.jpeg"
-        };
-
-        // Carrega configurações persistidas no navegador ou as padrões corretas da raiz
-        function loadSettings() {
-            const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
-            const settings = saved ? JSON.parse(saved) : DEFAULT_SETTINGS;
-
-            // Aplica as imagens diretamente na raiz
-            document.getElementById("img-slice-1").src = settings.img1;
-            document.getElementById("img-slice-2").src = settings.img2;
-            document.getElementById("img-slice-3").src = settings.img3;
-
-            // Atualiza todos os botões de checkout da página com o link ativo
-            const links = document.querySelectorAll(".checkout-link");
-            links.forEach(link => {
-                link.href = settings.checkoutLink;
-            });
-
-            // Preenche os campos do painel administrativo
-            document.getElementById("cfg-checkout-link").value = settings.checkoutLink;
-            document.getElementById("cfg-img-1").value = settings.img1;
-            document.getElementById("cfg-img-2").value = settings.img2;
-            document.getElementById("cfg-img-3").value = settings.img3;
-        }
-
-        // Salva as configurações do painel administrativo
-        function saveAdminSettings() {
-            const newSettings = {
-                checkoutLink: document.getElementById("cfg-checkout-link").value,
-                img1: document.getElementById("cfg-img-1").value,
-                img2: document.getElementById("cfg-img-2").value,
-                img3: document.getElementById("cfg-img-3").value
-            };
-
-            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newSettings));
-            loadSettings();
-            toggleModal('admin-modal');
-        }
-
-        // Gerenciador de erros de carregamento de imagem: cria um substituto totalmente branco e limpo, sem pontilhados
-        function handleImageError(img, sliceNum) {
-            console.warn(`Imagem ${sliceNum} não encontrada na raiz. Exibindo espaço em branco de proteção.`);
-            img.onerror = null; // impede loop infinito
-            
-            // Cria um fallback branco com texto para sinalizar caso o arquivo não tenha sido enviado ao Git
-            img.src = `https://placehold.co/640x960/ffffff/0a1b33?text=Aguardando+Imagem+${sliceNum}`;
-            img.className = "w-full h-auto object-cover py-20 px-4 text-center font-cinzel bg-white";
-        }
-
-        // Alterna a visibilidade dos modais de forma limpa
+        // Alterna a visibilidade dos modais de forma limpa (Privacidade e Termos)
         function toggleModal(modalId) {
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.classList.toggle("hidden");
             }
         }
-
-        // Carrega as configurações assim que a página é lida
-        window.onload = function () {
-            loadSettings();
-        };
     </script>
 </body>
 </html>
